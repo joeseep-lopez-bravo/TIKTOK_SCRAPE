@@ -109,7 +109,7 @@ class Scraper_tiktok_perfiles():
         except Exception:
             return False            
     def resolver_captcha(self,driver):
-        #self.sadcaptcha.solve_captcha_if_present()
+        self.sadcaptcha.solve_captcha_if_present()
         logging.info("Captcha resuelto")
     def find_search_input(self,driver):
         for selector in self.selectors_busqueda:
@@ -255,7 +255,7 @@ class Scraper_tiktok_perfiles():
                                 contenido_coment=coment.text
                                 if contenido_coment not in comentarios_vistos:  # Verifica si el texto ya fue procesado
                                     comentarios_vistos.add(contenido_coment)
-                                    logging.info("Estamos en el iterador" , i)
+                                    logging.info(f"Estamos en el iterador {i}")
                                     
                                     try :
                                         user_coment = WebDriverWait(coment, 35).until(

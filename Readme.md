@@ -12,6 +12,9 @@ Ensure the following configuration files are properly configured:
 - **`perfil.conf`**: List of target profiles.
 - **`apikeys.conf`**: Contains the API key for solving captchas.
 - **`db_credentials.ini`**: Stores database connection details.
+
+You cand find the apikey from :https://www.sadcaptcha.com/
+
 ```conf
 [CAPTCHA_SOLVER]
 api_key= 'YOUR_APIKEY'

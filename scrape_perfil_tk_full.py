@@ -246,7 +246,7 @@ class Scraper_tiktok_perfiles():
             finally:
                 time.sleep(1)  # Evita uso excesivo de recursos    
     def resolver_captcha(self,driver):
-        #self.sadcaptcha.solve_captcha_if_present()
+        self.sadcaptcha.solve_captcha_if_present()
         logging.info("Captcha resuelto")
     def find_search_input(self,driver):
         for selector in self.selectors_busqueda:
